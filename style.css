@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+:root{
+    --scl:0; 
+}
+
+/* TODO : make a m4Info responsive using scale. */
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+body {
+    background-color: rgb(29, 28, 28);
+}
+
+#navbar ul {
+    font-family: monospace;
+    color: white;
+}
+
+#navbar ul li {
+    margin: 0rem 1.1rem;
+    font-size: 1rem;
+    padding: 0.9rem;
+    font-weight: bold;
+
+}
+
+#navbar ul button {
+    margin-top: auto;
+    margin-bottom: auto;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.1rem;
+    color: whitesmoke;
+    background-color: red;
+    border-radius: 2px;
+    border: 0;
+
+}
+
+#logo {
+    color: rgb(233, 0, 0);
+    font-weight: bold;
+    padding: 0.9rem;
+    padding-bottom: 0;
+
+}
+
+#logo img {
+    width: 5rem;
+}
+
+#section1 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('img/soldierHD.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-bottom: 2px solid red;
+
+}
+
+#intro {
+    margin-top: 40vh;
+    margin-left: 6vw;
+    padding: 1rem;
+    font-size: 2rem;
+    position: relative;
+    font-family: 'Inter';
+    color: red;
+}
+
+
+
+
+#introLine1 {
+    font-size: 1.3rem;
+    font-family: 'Inter';
+    font-weight: 600;
+    line-height: 24px;
+    color: #FF0000;
+}
+
+#Americas {
+    color: white;
+}
+
+#introLine2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.3rem;
+}
+
+#introLine2::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 4.2rem;
+    background-color: white;
+    margin-left: 0.5rem;
+    animation-name: ani;
+    animation-timing-function: steps(1);
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+
+#section2 {
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    gap: 5rem;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+/* #infoListBox {
+
+    border-left: 5px solid rgb(32, 32, 32);
+    border-right: 5px solid rgb(13, 13, 13);
+    border-top: 5px solid #000000;
+    border-bottom: 5px solid #1c1c1c;
+
+    box-shadow: -4px 0 0 0 black,
+    4px 0 0 0 black,
+    0 -4px 0 0 black,
+    0 4px 0 0 black;
+    background-color: rgba(15, 68, 15, 0.311);
+
+} */
+
+#screenBox {
+
+    height: 80vh;
+
+    width: 90%;
+    min-width: 300px;
+
+    background-color: rgb(7, 7, 7);
+
+    display: flex;
+   
+   
+}
+
+
+#M4Info{
+    border: 2px solid red;
+    height: 100%;
+    width:  30%;
+    color: rgb(88, 245, 88);
+
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#M4Image{
+    border: 2px solid green;
+    background-image: url('/Weapon-Landing-Page/img/m4a1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:100%;
+    height: 100%;
+    width:  70%;
+    /* min-width: 300px; */
+    
+    
+}
+
+#M4Info ul{
+    border: 2px solid blue;
+    transform: scale(0.5);
+    list-style-type: none;
+    padding-top: 2em;
+    padding-left: 2em;
+    line-height: 2em;
+    font-size: small;
+}
+
+
+
+@keyframes flicker {
+    0% {
+        opacity: 0.27861;
+    }
+
+    5% {
+        opacity: 0.34769;
+    }
+
+    10% {
+        opacity: 0.23604;
+    }
+
+    15% {
+        opacity: 0.90626;
+    }
+
+    20% {
+        opacity: 0.18128;
+    }
+
+    25% {
+        opacity: 0.83891;
+    }
+
+    30% {
+        opacity: 0.65583;
+    }
+
+    35% {
+        opacity: 0.67807;
+    }
+
+    40% {
+        opacity: 0.26559;
+    }
+
+    45% {
+        opacity: 0.84693;
+    }
+
+    50% {
+        opacity: 0.96019;
+    }
+
+    55% {
+        opacity: 0.08594;
+    }
+
+    60% {
+        opacity: 0.20313;
+    }
+
+    65% {
+        opacity: 0.71988;
+    }
+
+    70% {
+        opacity: 0.53455;
+    }
+
+    75% {
+        opacity: 0.37288;
+    }
+
+    80% {
+        opacity: 0.71428;
+    }
+
+    85% {
+        opacity: 0.70419;
+    }
+
+    90% {
+        opacity: 0.7003;
+    }
+
+    95% {
+        opacity: 0.36108;
+    }
+
+    100% {
+        opacity: 0.24387;
+    }
+}
+
+@keyframes textShadow {
+    0% {
+        text-shadow: 0.4389924193300864px 0 1px rgba(0, 30, 255, 0.5), -0.4389924193300864px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    5% {
+        text-shadow: 2.7928974010788217px 0 1px rgba(0, 30, 255, 0.5), -2.7928974010788217px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    10% {
+        text-shadow: 0.02956275843481219px 0 1px rgba(0, 30, 255, 0.5), -0.02956275843481219px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    15% {
+        text-shadow: 0.40218538552878136px 0 1px rgba(0, 30, 255, 0.5), -0.40218538552878136px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    20% {
+        text-shadow: 3.4794037899852017px 0 1px rgba(0, 30, 255, 0.5), -3.4794037899852017px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    25% {
+        text-shadow: 1.6125630401149584px 0 1px rgba(0, 30, 255, 0.5), -1.6125630401149584px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    30% {
+        text-shadow: 0.7015590085143956px 0 1px rgba(0, 30, 255, 0.5), -0.7015590085143956px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    35% {
+        text-shadow: 3.896914047650351px 0 1px rgba(0, 30, 255, 0.5), -3.896914047650351px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    40% {
+        text-shadow: 3.870905614848819px 0 1px rgba(0, 30, 255, 0.5), -3.870905614848819px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    45% {
+        text-shadow: 2.231056963361899px 0 1px rgba(0, 30, 255, 0.5), -2.231056963361899px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    50% {
+        text-shadow: 0.08084290417898504px 0 1px rgba(0, 30, 255, 0.5), -0.08084290417898504px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    55% {
+        text-shadow: 2.3758461067427543px 0 1px rgba(0, 30, 255, 0.5), -2.3758461067427543px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    60% {
+        text-shadow: 2.202193051050636px 0 1px rgba(0, 30, 255, 0.5), -2.202193051050636px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    65% {
+        text-shadow: 2.8638780614874975px 0 1px rgba(0, 30, 255, 0.5), -2.8638780614874975px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    70% {
+        text-shadow: 0.48874025155497314px 0 1px rgba(0, 30, 255, 0.5), -0.48874025155497314px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    75% {
+        text-shadow: 1.8948491305757957px 0 1px rgba(0, 30, 255, 0.5), -1.8948491305757957px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    80% {
+        text-shadow: 0.0833037308038857px 0 1px rgba(0, 30, 255, 0.5), -0.0833037308038857px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    85% {
+        text-shadow: 0.09769827255241735px 0 1px rgba(0, 30, 255, 0.5), -0.09769827255241735px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    90% {
+        text-shadow: 3.443339761481782px 0 1px rgba(0, 30, 255, 0.5), -3.443339761481782px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    95% {
+        text-shadow: 2.1841838852799786px 0 1px rgba(0, 30, 255, 0.5), -2.1841838852799786px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+
+    100% {
+        text-shadow: 2.6208764473832513px 0 1px rgba(0, 30, 255, 0.5), -2.6208764473832513px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    }
+}
+
+.crt::after {
+    content: " ";
+    position: absolute;
+   
+    height: 80vh;
+    width: 90%;
+    min-width: 300px;
+    background: rgba(18, 16, 16, 0.1);    
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+    animation: flicker 0.15s infinite;
+}
+
+.crt::before {
+    content: " ";
+    position: absolute;
+   
+    height: 80vh;
+    width: 90%;
+    min-width: 300px;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+.crt {
+    animation: textShadow 1.6s infinite;
+}
+
+@keyframes ani {
+    from {
+        background-color: transparent
+    }
+
+    50% {
+        background-color: white;
+    }
+}
+
+@media screen and (max-width: 830px) {
+  
+    /* #infoListBox {
+
+        height: 80vh;
+
+        width: 70%;
+        min-width: 300px;
+    } */
+
+    /* #M14-Box {
+
+        height: 80vh;
+
+        width: 90%;
+        min-width: 300px;
+    } */
+
+    #screenBox{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (orientation: landscape) {
+    #section2 {
+      background-color: lightblue;
+    }
+    #screenBox{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+  }
