@@ -5,8 +5,8 @@
     padding: 0%;
 }
 
-:root{
-    --scl:0; 
+:root {
+    --scl: 0;
 }
 
 /* TODO : make a m4Info responsive using scale. */
@@ -20,6 +20,7 @@
 
 body {
     background-color: rgb(29, 28, 28);
+    background-color: rgb(15, 15, 15);
 }
 
 #navbar ul {
@@ -61,6 +62,7 @@ body {
 }
 
 #section1 {
+    background-color: rgb(15, 15, 15);
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -69,6 +71,7 @@ body {
     background-position: center;
     background-size: cover;
     border-bottom: 2px solid red;
+    margin-bottom: 10vh;
 
 }
 
@@ -126,20 +129,29 @@ body {
     padding-bottom: 10vh;
 }
 
-/* #infoListBox {
+#worldMap{
+    height: 100vh;
 
-    border-left: 5px solid rgb(32, 32, 32);
-    border-right: 5px solid rgb(13, 13, 13);
-    border-top: 5px solid #000000;
-    border-bottom: 5px solid #1c1c1c;
+    width: 90%;
+    min-width: 300px;
 
-    box-shadow: -4px 0 0 0 black,
-    4px 0 0 0 black,
-    0 -4px 0 0 black,
-    0 4px 0 0 black;
-    background-color: rgba(15, 68, 15, 0.311);
+    background-color: rgb(7, 7, 7);
+    background-image: url('/Weapon-Landing-Page/img/redWorldMap.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90%;
+}
 
-} */
+
+#section3 {
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    gap: 5rem;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+
 
 #screenBox {
 
@@ -150,16 +162,23 @@ body {
 
     background-color: rgb(7, 7, 7);
 
+
     display: flex;
-   
-   
+
+    border-left: 7px solid rgb(13, 13, 13);
+    border-right: 7px solid #141414;
+    border-top: 7px solid rgb(13, 13, 13);
+    border-bottom: 7px solid #191919;
+
+    
+
 }
 
 
-#M4Info{
-    border: 2px solid red;
+#M4Info {
+    /* border: 2px solid red; */
     height: 100%;
-    width:  30%;
+    width: 30%;
     color: rgb(88, 245, 88);
 
     min-width: 300px;
@@ -170,22 +189,22 @@ body {
 
 
 
-#M4Image{
-    border: 2px solid green;
+#M4Image {
+    /* border: 2px solid green; */
     background-image: url('/Weapon-Landing-Page/img/m4a1.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size:100%;
+    background-size: 100%;
     height: 100%;
-    width:  70%;
+    width: 70%;
     /* min-width: 300px; */
-    
-    
+
 }
 
-#M4Info ul{
-    border: 2px solid blue;
-    transform: scale(0.5);
+#M4Info ul {
+    /* border: 2px solid blue; */
+    /* transform: scale(var(--scl)); */
+    /* transform: scale(1); */
     list-style-type: none;
     padding-top: 2em;
     padding-left: 2em;
@@ -370,11 +389,11 @@ body {
 .crt::after {
     content: " ";
     position: absolute;
-   
+
     height: 80vh;
     width: 90%;
     min-width: 300px;
-    background: rgba(18, 16, 16, 0.1);    
+    background: rgba(18, 16, 16, 0.1);
     opacity: 0;
     z-index: 2;
     pointer-events: none;
@@ -384,7 +403,7 @@ body {
 .crt::before {
     content: " ";
     position: absolute;
-   
+
     height: 80vh;
     width: 90%;
     min-width: 300px;
@@ -408,23 +427,8 @@ body {
     }
 }
 
-@media screen and (max-width: 830px) {
+/* @media screen and (max-width: 830px) {
   
-    /* #infoListBox {
-
-        height: 80vh;
-
-        width: 70%;
-        min-width: 300px;
-    } */
-
-    /* #M14-Box {
-
-        height: 80vh;
-
-        width: 90%;
-        min-width: 300px;
-    } */
 
     #screenBox{
         flex-direction: column-reverse;
@@ -432,15 +436,32 @@ body {
         align-items: center;
     }
 
-}
+} */
 
 @media only screen and (orientation: landscape) {
-    #section2 {
-      background-color: lightblue;
-    }
-    #screenBox{
+    /* #section2 {
+
+    } */
+
+    #screenBox {
         flex-direction: row;
         justify-content: center;
         align-items: center;
     }
-  }
+}
+
+@media only screen and (orientation: portrait) {
+    #screenBox {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #M4Image{
+        width: 100%;
+    }
+
+    #M4Info{
+        width: 100%;
+    }
+}

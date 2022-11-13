@@ -30,3 +30,18 @@ async function typing(id) {
 }
 
 typing();
+
+
+/* For scaling M4 info box */
+
+// let r = document.querySelector(':root');
+// let rs = getComputedStyle(r);
+
+// window.addEventListener('resize', function(event){
+//     var newWidth = window.innerWidth;
+//     var newHeight = window.innerHeight;
+
+//     r.style.setProperty("--scl", newWidth/1000);
+//     console.log(newWidth/1000 * 2);
+
+// });
