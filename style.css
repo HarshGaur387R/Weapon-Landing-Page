@@ -130,18 +130,23 @@ body {
 }
 
 #worldMap{
-    height: 100vh;
+    height: 80vh;
 
     width: 90%;
     min-width: 300px;
 
     background-color: rgb(7, 7, 7);
-    background-image: url('/Weapon-Landing-Page/img/redWorldMap.png');
+    /* background-image: url('/Weapon-Landing-Page/img/redWorldMap.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 90%;
+    background-size: 90%; */
 }
 
+#worldMap object{
+    width: 90vw;
+    height: 80vh;
+    /* transform: rotate(-90deg) */
+}
 
 #section3 {
     width: 100%;
@@ -464,4 +469,5 @@ body {
     #M4Info{
         width: 100%;
     }
+
 }
