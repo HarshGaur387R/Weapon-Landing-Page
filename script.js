@@ -3,7 +3,12 @@ var j = 0;
 var intervalTime = 0;
 const txt = ['Explosives', 'Armors', 'Ammos', 'Knives', 'Weapons'];
 
-let element = document.getElementById('introLine2').firstElementChild;
+let element = document.getElementById('weapons');
+
+var openBtn = document.getElementById('opn');
+var closeBtn = document.getElementById('cls');
+closeBtn.style.display = 'none';
+var sidebar = document.getElementById('sidebar');
 
 /* The text */
 var speed = 50; /* The speed/duration of the effect in milliseconds */
@@ -14,7 +19,7 @@ function sleep(ms) {
 
 async function typing(id) {
 
-    document.getElementById('introLine2').removeEventListener('click',typing);
+    document.getElementById('weapons').removeEventListener('click',typing);
 
     for (let index = 0; index < txt.length; index++) {
         await sleep(600);
@@ -26,11 +31,40 @@ async function typing(id) {
         }
     }
    
-    document.getElementById('introLine2').addEventListener('click',typing);
+    document.getElementById('weapons').addEventListener('click',typing);
 }
 
 typing();
 
+
+let priceBtn = document.getElementById('pricingBtn');
+
+
+function openSidebar() {
+    
+    
+    openBtn.style.display = 'none';
+    
+    sidebar.style.transform = 'translate(0vw)';
+    
+    closeBtn.style.display = 'initial';
+
+}
+
+
+function closeSidebar() {
+    
+    closeBtn.style.display = 'none';
+    
+    sidebar.style.transform = 'translate(-50vw)';
+
+    openBtn.style.display = 'initial';
+}
+
+// document.getElementById('sidebarLogo').addEventListener('click',()=>{
+//     openBtn.style.display = 'initial';
+
+// });
 
 /* For scaling M4 info box */
 

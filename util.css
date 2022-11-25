@@ -30,6 +30,30 @@
     list-style-type: none;
 }
 
-.f-flow {
+.f-flow-row-wrap {
     flex-flow: row wrap;
+}
+
+.f-flow-wrap{
+    flex-flow: wrap;
+}
+
+.f-flow-column{
+    flex-flow: column;
+}
+
+.f-wrap-wrap{
+    flex-wrap: wrap;
+}
+
+.f-wrap-nowrap{
+    flex-wrap: nowrap;
+}
+
+.f-direction-row{
+    flex-direction: row;
+}
+
+.f-direction-column{
+    flex-direction: column;
 }

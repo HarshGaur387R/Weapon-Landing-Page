@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
 * {
     margin: 0%;
@@ -9,18 +9,23 @@
     --scl: 0;
 }
 
+#break {
+    display: none;
+}
+
 /* TODO : make a m4Info responsive using scale. */
 
 #navbar {
     position: fixed;
     width: 100%;
     background-color: rgb(0, 0, 0, 0.4);
-    z-index: 1;
+    z-index: 4;
 }
 
 body {
-    background-color: rgb(29, 28, 28);
-    background-color: rgb(15, 15, 15);
+    /* background-color: rgb(29, 28, 28); */
+    /* background-color: rgb(15, 15, 15); */
+    background-color: black;
 }
 
 #navbar ul {
@@ -61,6 +66,59 @@ body {
     width: 5rem;
 }
 
+#sidebar {
+    display: none;
+    background-color: rgba(71, 71, 71, 0.093);
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 50vw;
+    position: fixed;
+    z-index: 10;
+    overflow: auto;
+    transform: translate(-50vw);
+
+}
+
+#sidebar ul {
+    color: white;
+    font-family: 'inter';
+    font-weight: 900;
+    padding: 1rem;
+    font-size: calc(12px + 2vw);
+    line-height: 5rem;
+
+}
+
+#sidebarLogo {
+    color: rgb(233, 0, 0);
+    font-weight: bold;
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+#sidebarLogo img {
+    padding-top: 5vh;
+    width: 40%;
+    min-width: 80px;
+}
+
+
+#cls img {
+    display: none;
+    position: fixed;
+    width: 30px;
+    z-index: 11;
+    padding: 1rem;
+}
+
+#opn img {
+    display: none;
+    position: fixed;
+    width: 30px;
+    z-index: 11;
+    padding: 1rem;
+}
+
 #section1 {
     background-color: rgb(15, 15, 15);
     width: 100%;
@@ -70,7 +128,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-bottom: 2px solid red;
+    border-bottom: 3px solid red;
     margin-bottom: 10vh;
 
 }
@@ -90,6 +148,7 @@ body {
 
 #introLine1 {
     font-size: 1.3rem;
+    /* font-size: calc(15px + 1vw); */
     font-family: 'Inter';
     font-weight: 600;
     line-height: 24px;
@@ -98,6 +157,7 @@ body {
 
 #Americas {
     color: white;
+    /* font-size: calc(36px + 1.5vw); */
 }
 
 #introLine2 {
@@ -105,6 +165,7 @@ body {
     font-style: normal;
     font-weight: 600;
     font-size: 3.3rem;
+    /* font-size: calc(50px + 1.5vw); */
 }
 
 #introLine2::after {
@@ -124,36 +185,101 @@ body {
 #section2 {
     width: 100%;
     background-color: rgb(15, 15, 15);
-    gap: 5rem;
+
+    background-color: black;
+    gap: 1rem;
     padding-top: 10vh;
     padding-bottom: 10vh;
+
 }
 
-#worldMap{
+#countriesName {
     height: 80vh;
+    width: 45%;
+    /* min-width: 300px; */
+
+    background-color: rgb(7, 7, 7);
+    overflow-y: auto;
+}
+
+#slogan {
+    text-transform: uppercase;
+    padding: 1rem;
+    color: red;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-size: 5vw; */
+    font-size: calc(12px + 3.5vw);
+    font-weight: bolder;
+}
+
+#countriesList {
+    font-size: calc(12px + 1vw);
+    padding-top: 1rem;
+    color: white;
+    text-align: center;
+    list-style: none;
+    font-family: 'inter';
+
+}
+
+#countriesList li {
+    /* line-height: 1.5rem; */
+    padding: 1%;
+}
+
+#countriesList li:nth-child(1) {
+    background-color: #191919;
+}
+
+#countriesList li:nth-child(3) {
+    background-color: #141414;
+}
+
+#countriesList li:nth-child(5) {
+    background-color: #141414;
+}
+
+#countriesList li:nth-child(7) {
+    background-color: #141414;
+}
+
+#worldMap {
+
+    height: 80vh;
+    width: 45%;
+    /* min-width: 300px; */
+
+    background-color: rgb(7, 7, 7);
+
+
+    /* height: 80vh;
 
     width: 90%;
     min-width: 300px;
 
-    background-color: rgb(7, 7, 7);
-    /* background-image: url('/Weapon-Landing-Page/img/redWorldMap.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 90%; */
+    background-color: rgb(7, 7, 7); */
+
+
+
 }
 
-#worldMap object{
-    width: 90vw;
-    height: 80vh;
+#worldMap object {
+    width: 100%;
+    height: 100%;
+    /* width: 90vw; */
+    /* height: 80vh;  */
     /* transform: rotate(-90deg) */
 }
 
 #section3 {
     width: 100%;
     background-color: rgb(15, 15, 15);
+    background-color: black;
     gap: 5rem;
     padding-top: 10vh;
     padding-bottom: 10vh;
+
 }
 
 
@@ -175,7 +301,7 @@ body {
     border-top: 7px solid rgb(13, 13, 13);
     border-bottom: 7px solid #191919;
 
-    
+
 
 }
 
@@ -202,6 +328,7 @@ body {
     background-size: 100%;
     height: 100%;
     width: 70%;
+    filter: saturate(3);
     /* min-width: 300px; */
 
 }
@@ -218,6 +345,123 @@ body {
 }
 
 
+#section4 {
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+
+    background-color: black;
+    gap: 1rem;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+#pricingBox {
+
+    width: 90%;
+    /* height: 80vh; */
+    min-height: 500px;
+    background-color: rgb(15, 15, 15);
+    /* background-color: #1e1e1e; */
+    position: relative;
+    /* border:2px solid red; */
+    padding-bottom: 1.5vw;
+
+}
+
+#pricingBox::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 80px solid black;
+    border-right: 80px solid rgb(131, 0, 0);
+    box-shadow: 4px 4px 3px 0px black;
+
+    border-top-right-radius: 5%;
+
+    width: 0;
+}
+
+#pricingHeader {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+
+    color: #FFFFFF;
+
+    font-size: calc(10px + 8vw);
+}
+
+#pricingTitle {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: bolder;
+    font-size: calc(5px + 3vw);
+
+    color: #FBFBFB;
+}
+
+#pricingTitle span {
+    color: red;
+}
+
+#pricingPrice {
+    font-family: 'Inter';
+    font-size: calc(15px + 9vw);
+    font-style: normal;
+    font-weight: bolder;
+    color: white;
+
+}
+
+#pricingBtn {
+    background-color: red;
+    border: 2px solid red;
+    padding: 4px;
+    font-family: 'Inter';
+    font-weight: bolder;
+    font-size: calc(10px + 4vw);
+    width: 40%;
+
+}
+
+#pricingBtn:active {
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+}
+
+#pricingCheckBox {
+
+    width: calc(7px + 1vw);
+    /* margin-left: 1vw; */
+}
+
+#pricingBox label {
+    color: white;
+    font-family: 'Inter';
+    font-weight: bolder;
+    font-size: calc(5px + 1vw);
+}
+
+#btnAndcheckBox {
+    gap: 5px
+}
+
+#checkBoxAndLabel {
+    gap: 3px;
+}
+
+#sidebar ul button {
+
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.1rem;
+    color: whitesmoke;
+    background-color: red;
+    border-radius: 2px;
+    border: 0;
+}
 
 @keyframes flicker {
     0% {
@@ -462,12 +706,70 @@ body {
         align-items: center;
     }
 
-    #M4Image{
+    #M4Image {
         width: 100%;
     }
 
-    #M4Info{
+    #M4Info {
         width: 100%;
     }
 
+    #section2 {
+        flex-direction: column;
+    }
+
+    #countriesName {
+        height: 45vh;
+        width: 90%;
+    }
+
+    #worldMap {
+        height: 45vh;
+        width: 90%;
+    }
+
+}
+
+@media only screen and (min-width:2000px) {
+    #introLine1 {
+        font-size: 100px;
+    }
+
+    #Americas {
+        font-size: 150px;
+    }
+
+    #introLine2 {
+        font-size: 200px;
+    }
+
+    #introLine2::after {
+        height: 250px;
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 834px) {
+    #navbar {
+        display: none;
+    }
+
+    #sidebar {
+        display: initial;
+    }
+
+    #opn img {
+        display: initial;
+    }
+
+    #cls img {
+        display: initial;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    #break {
+        display: initial;
+    }
 }
