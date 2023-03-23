@@ -322,7 +322,7 @@ body {
 
 #M4Image {
     /* border: 2px solid green; */
-    background-image: url('/Weapon-Landing-Page/img/m4a1.png');
+    background-image: url('img/m4a1.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
